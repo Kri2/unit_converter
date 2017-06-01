@@ -6,4 +6,16 @@
     <version>0.0.1-SNAPSHOT</version>
   </parent>
   <artifactId>units-converter-application</artifactId>
+	<dependencies>
+	<dependency>
+	<groupId>org.springframework</groupId>
+			<artifactId>spring-core</artifactId>
+			<version>4.1.1.RELEASE</version>
+	</dependency>
+	<dependency>
+		<groupId>pl.traza</groupId>
+		<artifactId>units-converter-domain</artifactId>
+		<version>0.0.1-SNAPSHOT</version>
+	</dependency>
+	</dependencies>
 </project>
