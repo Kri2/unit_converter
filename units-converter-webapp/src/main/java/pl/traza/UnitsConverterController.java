@@ -28,14 +28,21 @@ public class UnitsConverterController {
 		//trochę dziwne ze moge tu uzywac ten unitConverter przeciez on jest lokalny w funkcji wyzej, moze mozna go przeniesc tu?
 		//dalem tutaj i co się okazało, on jest przekazany przecież w argumencie, pojawiła sie info o zdublowanej zmiennej, czyli juz tu jest
 		//tylko skad jest w argumencie? nie ważne na razie
-		unitsConverterDAO.setTemperatureInCelsius( unitConverter.getTemperatureC());
+		
+		unitsConverterDAO.setTemperatureInCelsius( unitConverter.getTemperatureC() );
 		//return "converter";
+		//System.out.println(unitsConverterDAO.getTemperatureInCelsius());
 		return "redirect:/resultpage";
 	}
 	
 	@RequestMapping(value = "/resultpage")
 	public String showResult(Model model){
-		model.addAttribute("conversionResult", unitsConverterDAO.getTemperatureInCelsius());//no tu mi brakuje źródła danych DAO
+		UnitConverter unitConverter = new UnitConverter();
+		unitConverter.setTemperatureC(unitsConverterDAO.getTemperatureInCelsius());
+		
+		model.addAttribute("inputTemperature", unitConverter.getTemperatureF());
+		model.addAttribute("conversionResult", unitConverter.getTemperatureC());
+
 		return "resultpage";
 	}
 }

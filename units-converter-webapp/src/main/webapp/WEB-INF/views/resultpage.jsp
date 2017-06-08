@@ -9,7 +9,8 @@
 </head>
 <body>
 	<p>For now this is where conversion result will be shown</p>
-	<p>${conversionResult}</p>
+	<p>You have input temperature in Fahrenheit: ${inputTemperature}</p>
+	<p>This temperature in Celsius is: ${conversionResult}</p>
 
 	<a href="<c:url value="converter" />" >Back to input page</a>
 </body>
