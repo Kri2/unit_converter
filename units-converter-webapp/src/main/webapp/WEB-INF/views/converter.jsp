@@ -11,7 +11,7 @@
 	<p>Simple temperature converter</p>
 	<p>Type in the temperature in Fahrenheit</p>
 	<form:form method="POST" modelAttribute="unitConverterForm">
-		<form:input type="text" path="temperatureF"/>
+		<form:input type="text" path="temperatureC"/>
 	</form:form>
 </body>
 </html>
