@@ -78,7 +78,9 @@ public class UnitsConverterWebController {
 		
 		model.addAttribute("inputTemperature", unitConverter.getTemperatureF());
 		model.addAttribute("conversionResult", unitConverter.getTemperatureC());
-
+		
+		//previous values from database
+		model.addAttribute("previousValues", unitsConverterDAO.getTemperatureInCelsius(1) );
 		return "resultpage";
 	}
 }
