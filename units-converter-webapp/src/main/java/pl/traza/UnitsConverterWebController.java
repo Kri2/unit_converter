@@ -64,6 +64,7 @@ public class UnitsConverterWebController {
 		//unitConverter.setTemperatureC();
 		if(!result.hasErrors()){
 			unitsConverterDAO.setTemperatureInCelsius( unitConverterDTO.getTemperatureC() );
+			unitsConverterDAO.setTemperatureInCelsius( unitConverterDTO.getTemperatureC(), "do bazy");
 			return "redirect:/resultpage";
 		}
 		else
