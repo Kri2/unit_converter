@@ -13,5 +13,8 @@
 	<p>This temperature in Celsius is: ${conversionResult}</p>
 
 	<a href="<c:url value="converter" />" >Back to input page</a>
+	
+	<p>Those are some previous calculated temperatures (only first now)</p>
+	<p>${previousValues}</p>
 </body>
 </html>
